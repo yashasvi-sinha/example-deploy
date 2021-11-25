@@ -15,7 +15,20 @@ const allProducts = [
 ]
 
 //your all the other codes
-const buildFolderPath = `I:/Projects/AttainU/example-deploy/front-end/build`
+
+//this are required only if using type as module in package.json in server code
+import { fileURLToPath } from 'url'
+import { dirname, resolve } from 'path'
+
+// console.log(`🚀 ~ import.meta.url`, import.meta.url)
+const __fileName = fileURLToPath(import.meta.url)
+const __dirname = dirname(__fileName)
+console.log(`🚀 ~ __dirname`, __dirname)
+
+
+const buildFolderPath = resolve(__dirname, '../front-end/build') 
+console.log(`🚀 ~ buildFolderPath`, buildFolderPath)
+
 app.use(express.static(buildFolderPath))
 
 
