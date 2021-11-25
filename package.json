@@ -1,0 +1,24 @@
+{
+  "name": "example-deploy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "16.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd back-end && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashasvi-sinha/example-deploy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yashasvi-sinha/example-deploy/issues"
+  },
+  "homepage": "https://github.com/yashasvi-sinha/example-deploy#readme"
+}
