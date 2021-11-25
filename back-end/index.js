@@ -15,11 +15,18 @@ const allProducts = [
 ]
 
 //your all the other codes
+const buildFolderPath = `I:/Projects/AttainU/example-deploy/front-end/build`
+app.use(express.static(buildFolderPath))
 
 
 app.get('/api/products', (req, res) => {
     res.json(allProducts)
 });
+
+//React router
+app.get("*", (req, res) => {
+    res.sendFile(`${buildFolderPath}/index.html`)
+})
 
 app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
